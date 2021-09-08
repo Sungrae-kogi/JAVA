@@ -1,0 +1,73 @@
+프로그래밍을 하다보면 특정한 객체가 다른 객체에 의존적이게 되는 상황이 빈번하게 발생할 수 있습니다.
+
+Customer a = new Customer("기성룡",500);
+Customer b = new Customer("이청룡",800);
+
+a.PrintInterest();
+//함부로 타 클래스의 변수에 접근해서 값을 변경시켰다.
+Customer.rate = 0.5f;
+
+b.PrintInterest();
+
+
+-----------------------------
+class Customer{
+	String name;
+	float money;
+	static  float rate = 0.3f;
+	
+	Customer(String name, float money){
+		this.name = name;
+		this.money = money;
+	}
+
+	void PrintInterest(){
+		System.out.println("이자: "+ this.money *this.rate);
+	}
+}
+
+결과는 b에 엄청난 이자율이 적용이 되는 문제가 발생할것
+따라서 객지프에서 중요한 은닉화의 캡슐화 이것을 가능하게 하는것이 접근 제어자이다
+
+캡슐화란 특정  객체를 캡슐처럼 싸게되어 내부 정보를 공개하지 않고 한다리를 무조건 걸치게 하는 것
+
+여기서 static flaot rate를  -> private static float rate로 변경하면
+main에서 Customer.rate = 0.5f 부분이 에러가 발생, rate가 존재하지않는다고 한다
+** 속성이나 메소드에 private를 걸어주면 그 속성이나 메소드는 다른 클래스에서 사용할 수 없게 된다
+접근이 불가, 은닉화 된다
+
+public - 한 클래스파일에 단 한개의 public 클래스만 존재가능하다 존재하지않을수도 있다, 이건 많이 경험해봤을거임
+다른 패키지에서 사용할시에는 public 클래스만 사용 가능
+package(default) - 한 클래스파일에 여러개도 존재가능, 다른 패키지에서는 사용불가
+** 클래스의 접근제어자는 private과 protected를 지정할 수 없다
+중요한건 public은 한 클래스파일에 하나만 존재
+
+만일 모든 패키지에서 공통으로 사용하게 하고싶으면 속성이나 메소드를 public으로 선언
+
+private을 걸면 같은 패키지에 존재하는 클래스조차 (심지어 상속관계조차) 사용이 불가능해진다
+이러면 자기자신 클래스밖에 해당 변수나 클래스를 사용할수밖에없다.
+
+protected는 같은 패키지끼리는 public 효과나 다름없고 다른 패키지의 클래스에서는 private로 작용
+다만, *** 다른패키지일지라도, 상속받은 클래스라면 사용이 가능하다 이게 protected
+
+일반적인 클래스 모델 예제를 보면
+
+public class Unit{
+	private String name;
+	private int HP;
+	private int MP;
+	
+	public Unit(String name, int MP, int HP){
+		this.name = name;
+		this.MP = MP;
+		this.HP = HP;
+	}
+
+	public void showAttribute(){
+		System.out.println(name+","+HP+","+MP);
+	}
+}
+**일반적으로. 모든 속성은 private 처리를 하고 나머지 모든 메소드는 public 처리를 한다
+내부 속성을 private 하는건 내부보호를 위함이고 이렇게 걸지않으면 외부에서 
+해당 클래스의 속성값을 바꿀 수 있기 때문,
+따라서 ****메소드만을 public 처리를 함으로써, 외부와의 소통은 오로지 메소드를 통해서 할 수 있게 하는것***

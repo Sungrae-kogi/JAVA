@@ -16074,3 +16074,20 @@ java.io.FileNotFoundException:
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.ensureResultCached(DecorationScheduler.java:386)
 	at org.eclipse.ui.internal.decorators.DecorationScheduler$1.run(DecorationScheduler.java:362)
 	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.jdt.launching 4 120 2021-09-08 23:21:14.353
+!MESSAGE Cannot connect to VM
+!STACK 0
+java.net.SocketException: Socket closed
+	at java.base/sun.nio.ch.NioSocketImpl.endAccept(NioSocketImpl.java:689)
+	at java.base/sun.nio.ch.NioSocketImpl.accept(NioSocketImpl.java:762)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:662)
+	at java.base/java.net.ServerSocket.platformImplAccept(ServerSocket.java:628)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:604)
+	at java.base/java.net.ServerSocket.implAccept(ServerSocket.java:561)
+	at java.base/java.net.ServerSocket.accept(ServerSocket.java:518)
+	at org.eclipse.jdi.internal.connect.SocketTransportService.accept(SocketTransportService.java:101)
+	at org.eclipse.jdi.internal.connect.SocketTransportImpl.accept(SocketTransportImpl.java:63)
+	at org.eclipse.jdi.internal.connect.SocketListeningConnectorImpl.accept(SocketListeningConnectorImpl.java:167)
+	at org.eclipse.jdt.internal.launching.StandardVMDebugger$ConnectRunnable.run(StandardVMDebugger.java:114)
+	at java.base/java.lang.Thread.run(Thread.java:830)

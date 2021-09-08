@@ -1,0 +1,47 @@
+final 키워드는 클래스, 속성, 메소드, 지역변수를 더 이상 변형 불가능한 상태로 만듬
+
+ex)
+클래스 - 다른 클래스에 상속해줄 수 없는 상속계층의 제일 아랫단계 클래스
+메소드 - 마지막 메소드가 된다. 즉 오버라이딩이 불가능, 대신 오버로딩은 가능
+속성 - 상수가 된다, 변경 불가
+지역변수 - 상수가 된다. 변경 불가
+
+code ex)
+class Unit{
+	String name;
+	int HP;
+	int MP;
+	final void PrintUnitName(){
+		final String info = "이 유닛의 이름: ";	//info를 상수로 선언했다
+		info = "유닛의 이름:";		//상수선언한거를 바꾸려고했으니까 에러가 발생
+		System.out.println(info + name);
+}
+
+public final class Hero extends Unit{
+	static int count;
+	final int serial;
+	
+	Hero(){	//Hero 객체가 생성되는 순간 실행
+		serial = count++;
+		serial--;	//여기서도 마찬가지로 상수선언을 했으므로 변경이 불가 에러발생
+	}
+	//해당 메소드는 부모클래스에서 final로 선언된 메소드이므로 오버라이딩이 불가 따라서 에러가 발생할거임
+	void PrintUnitName(){
+		final String info = "이 영웅의 이름: ";
+		info = "영웅의 이름:";
+		System.out.println(info + name);
+	}
+}
+
+//상속할 Hero 클래스는 final로 선언되어 상속계층의 가장 최하에서 끝으로 선언했으므로, 누군가에게 상속하지않음 따라서 에러가 발생
+class UndeadHero extends Hero{
+}
+
+지역변수의 final 처리시 주의사항
+사용하기전에 반드시 초기화 *** 를 진행해 주자
+
+class ~~~{
+	static final int num;
+	public static void main(~~~~~){
+		System.out.println(num); 하면 초기화가되질않아서 사용이 불가
+따라서 생성자에서 초기화를 하거나 선언과 함께 직접 붙여주면된다
