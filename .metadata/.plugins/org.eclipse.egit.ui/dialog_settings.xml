@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<list key="RepositorySelectionPage.UsedUris">
+		<item value="https://github.com/Sungrae-kogi/JavaBook2.git"/>
+	</list>
+	<list key="EGit.KnownHosts">
+		<item value="git.eclipse.org"/>
+		<item value="github.com"/>
+		<item value="bitbucket.org"/>
+	</list>
+	<list key="CommitDialog.authorValues">
+		<item value="Sungrae Cho &lt;whvkek@naver.com&gt;"/>
+	</list>
+	<list key="CommitDialog.committerValues">
+		<item value="Sungrae Cho &lt;whvkek@naver.com&gt;"/>
+	</list>
+	<section name="org.eclipse.egit.ui.internal.staging.StagingView">
+		<item key="MAIN_SASH_FORM_ORIENTATION_VERTICAL" value="false"/>
+		<item key="HORIZONTAL_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="STAGING_SASH_FORM_WEIGHT" value="500,500"/>
+		<item key="sortItemState" value="false"/>
+	</section>
+	<section name="GitCommitMessageComponent">
+		<list key="C:\Users\82102\eclipse-workspace\JavaBook2\.git">
+			<item value="false"/>
+			<item value="Sungrae Cho &lt;whvkek@naver.com&gt;"/>
+			<item value="fdsf"/>
+			<item value="Sungrae Cho &lt;whvkek@naver.com&gt;"/>
+			<item value="0000000000000000000000000000000000000000"/>
+			<item value="0"/>
+			<item value="false"/>
+		</list>
+		<list key="C:\Users\82102\eclipse-workspace\JAVAbook2\.git">
+			<item value="empty"/>
+		</list>
+		<list key="C:\Users\82102\eclipse-workspace\JavBook\.git">
+			<item value="empty"/>
+		</list>
+	</section>
+</section>

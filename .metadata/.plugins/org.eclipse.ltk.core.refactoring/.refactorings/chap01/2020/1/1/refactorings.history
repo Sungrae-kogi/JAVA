@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;chap01&apos;&#x0D;&#x0A;- Original project: &apos;chap01&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     chap01.ArrayCopyByForExample.java&#x0D;&#x0A;     chap01.Hello.java&#x0D;&#x0A;     chap01.Week.java" description="Delete elements" element1="/src&lt;chap01{Week.java" element2="/src&lt;chap01{Hello.java" element3="/src&lt;chap01{ArrayCopyByForExample.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1577942782143" subPackages="false" version="1.0"/>
+</session>

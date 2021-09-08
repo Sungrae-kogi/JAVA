@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 3 elements from project &apos;program_1 (6)&apos;&#x0D;&#x0A;- Original project: &apos;program_1 (6)&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     Dbinfo.LabTest.java&#x0D;&#x0A;     Dbinfo.Merge.java&#x0D;&#x0A;     Dbinfo.SortedList.java" description="Delete elements" element1="/&lt;Dbinfo{SortedList.java" element2="/&lt;Dbinfo{LabTest.java" element3="/&lt;Dbinfo{Merge.java" elements="3" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1604904062388" subPackages="false" version="1.0"/>
+</session>
